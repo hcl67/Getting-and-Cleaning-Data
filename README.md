@@ -2,7 +2,7 @@
 
 Coursera Getting and Cleaning Data Project
 
-this repository is for the project assignment for Coursera course: Getting and Cleaning Data
+This repository is for the project assignment for Coursera course: Getting and Cleaning Data
 
 ## Project Requirement
 
@@ -38,3 +38,25 @@ run_analysis.R
 
 tidy.data.csv         
     - the final tidy data contains the average of mean and standard deviation for each measurement for each activity and each subject. 
+
+## data process 
+the following data was used to generate the tidy.data, for more detailed info about the raw data, please refer to the README.txt and feature_info.txt from the original zip file.
+ 
+/train/X_train.txt        - all measures from accelerometers
+
+/train/y_train.txt        - indicator for different activity
+
+/train/subject_train.txt  - indicator for different subject
+
+/test/X_test.txt          - same as train data
+
+/test/y_test.txt          - same as train data
+
+/test/subject_test.txt    - same as train data
+
+1st step: measure, activity indicator, subject indicator are merged together for train and test, then combine train and test to generate the full dataset. Notice that the activity indicator was translated to the real meaning.
+
+2nd step: the measurements on the mean and standard deviation for each measurement are extracted
+ 
+3rd step: all above measurements are averaged on activity and subject level to get the final tidy data	
+	
