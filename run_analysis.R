@@ -38,4 +38,4 @@ library("reshape")
 tidy.data <- cast(melt(data2, id = c("activity", "subject")), activity + subject ~ variable, mean)
 
 # write the tidy data
-write.csv(tidy.data, "tidy.data.csv")
+write.csv(tidy.data, "tidy.data.txt")
